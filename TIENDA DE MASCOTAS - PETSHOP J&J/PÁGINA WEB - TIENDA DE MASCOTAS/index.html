@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-------- Creación de la primera parte de la página --------->
+    <title>J & J - CON AMOR PARA TUS PELUDITOS</title>
+    <meta name="title" content="J & J - CON AMOR PARA TUS PELUDITOS">
+    <meta name="description" content="This is an eCommerce html template made by codewithsadee">
+
+    <!----- Sección del Favicon ------->
+    <link rel="shortcut icon" href="imagen.ico">
+
+    <!------ Link al CSS ------>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!------ Google font link ------>
+    <link rel="preconnect" hreF="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!------ Link que vincula al banner o portada de la página ------>
+    <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+
+    
+    
+</head>
+
+
+<body id="top">
+    <!------ Encabezado de la página ------>
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+                <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+            </button>
+
+            <a href="#" class="logo">J & J</a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Inicio</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#shop" class="navbar-link" data-nava-link>Tienda</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Colecciones</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Contacto</a>
+                    </li>
+
+                </ul>
+
+                <a href="#" class="navbar-action-btn">Log In</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="action-btn" aria-label="Search">
+                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <button class="action-btn user" aria-label="User">
+                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                  </button>
+            </div>
+
+            <!------ Creación del carrito de compras ------>
+             <div>
+              <img onmouseover="showCart(this)" class="cart" src="./assets/images/cart.png" alt="">
+              <p class="count-product">0</p>
+          </div>
+          <div class="cart-products" id="products-id">
+              <p class="close-btn" onclick="closeBtn()">X</p>
+              <h3>Mi carrito</h3>
+              <div class="card-items">
+              </div>
+              <h2>Total: <strong class="price-total">0</strong> $</h2>
+          </div>
+
+      </div>
+        </div>
+    </header>
+
+
+
+<main>
+    <article>
+        <!------ Sección del banner principal ------>
+
+        <section class="section hero has-bg-image" id="home" arial-label="home"
+        style="background-image: url('./assets/images/hero-banner.jpg')">
+        <div class="container">
+
+            <h1 class="h1 hero-title">
+                <span class="span">J & J</span> Pet Shop
+              </h1>
+    
+              <a href="#" class="btn">¡Compra ahora!</a>
+    
+            </div>
+          </section>
+
+
+
+    <!------ Categorías o sección de noticias de la página ------>
+
+    <section class="section category" arial-label="category">
+        <div class="container">
+
+            <h2 class="h2 section-title">
+                <span class="span">Lo mejor</span> en categorías
+              </h2>
+
+              <ul class="has-scrollbar">
+
+                <li class="scrollbar-item">
+                  <div class="category-card">
+
+                    <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                        <img src="./assets/images/category-1.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                          class="img-cover">
+                      </figure>
+
+                      <h3 class="h3">
+                        <a href="#" class="card-title">¡Comida para tu gato!</a>
+                      </h3>
+
+                      </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+
+                            <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                              <img src="./assets/images/category-2.jpg" width="330" height="300" loading="lazy" alt="Cat Toys"
+                                class="img-cover">
+                            </figure>
+            
+                            <h3 class="h3">
+                              <a href="#" class="card-title">¡Juguetes para tu gato!</a>
+                            </h3>
+            
+                          </div> 
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+          
+                          <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                            <img src="./assets/images/category-3.jpg" width="330" height="300" loading="lazy" alt="Dog Food"
+                              class="img-cover">
+                          </figure>
+          
+                          <h3 class="h3">
+                            <a href="#" class="card-title">¡Comida para tu perro!</a>
+                          </h3>
+          
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+          
+                          <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                            <img src="./assets/images/category-4.jpg" width="330" height="300" loading="lazy" alt="Dog Toys"
+                              class="img-cover">
+                          </figure>
+          
+                          <h3 class="h3">
+                            <a href="#" class="card-title">¡Juguetes para tu perro!</a>
+                          </h3>
+          
+                        </div>
+                      </li>
+
+                      <li class="scrollbar-item">
+                        <div class="category-card">
+          
+                          <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                            <img src="./assets/images/category-5.jpg" width="330" height="300" loading="lazy"
+                              alt="Dog Sumpplements" class="img-cover">
+                          </figure>
+          
+                          <h3 class="h3">
+                            <a href="#" class="card-title">¡Farmacia para tus mascotas!</a>
+                          </h3>
+          
+                        </div>
+                      </li>
+          
+                    </ul>
+      
+        </div>
+    </section>
+
+
+
+    <!------ Sección válida para las ofertas ------>
+
+    <section class="section offer" aria-label="offer">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('./assets/images/offer-banner-1.jpg'); --width: 540; --height: 374;">
+
+                <p class="card-subtitle">¿Necesitas ayuda con tu mascota?</p>
+
+                <h3 class="h3 card-title">
+                  Reserva con<span class="span">cuidado y veterinaria</span>
+                </h3>
+
+                <a href="#" class="btn">¡Reservar ahora!</a>
+
+              </div>
+            </li>
+
+            <li>
+                <div class="offer-card has-bg-image img-holder"
+                  style="background-image: url('./assets/images/offer-banner-2.jpg'); --width: 540; --height: 374;">
+  
+                  <p class="card-subtitle">¿Buscas entretenimiento?</p>
+  
+                  <h3 class="h3 card-title">
+                    ¡Encarga los<span class="span">mejores juguetes!</span>
+                  </h3>
+  
+                  <a href="#" class="btn">¡Encargar ahora!</a>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="offer-card has-bg-image img-holder"
+                  style="background-image: url('./assets/images/offer-banner-3.jpg'); --width: 540; --height: 374;">
+  
+                  <p class="card-subtitle">¡Aporta tu granito de arena!</p>
+  
+                  <h3 class="h3 card-title">
+                    ¡Haz tu donación <span class="span">a nuestra fundación!</span>
+                  </h3>
+  
+                  <a href="#" class="btn">¡Donar ahora!</a>
+  
+                </div>
+              </li>
+  
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!----- Productos para la página ------>
+
+    <section class="section product" id="shop" aria-label="product">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            <span class="span">Nuestros</span> productos
+          </h2>
+          <section class="container">
+            <div class="products">
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-1.jpg" alt="">
+                        <p><span>18,00</span>$ US</p>
+                    </div>
+                    <p class="title">¡Un comedero especial hecho para tu mejor amigo!</p>
+                    <a href="" data-id="1" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-2.jpg" alt="">
+                        <p><span>15,00</span>$ PROM</p>
+                    </div>
+                    <p class="title"> ¡Arenero portátil y fácil de limpiar para tu felino!</p>
+                    <a href="" class="btn-add-cart" data-id="2">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-3.jpg" alt="">
+                        <p><span>10,00</span>$ US</p>
+                    </div>
+                    <p class="title"> ¡Peluche de un zorrito artesanal hecho a mano!</p>
+                    <a href="" data-id="3" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-4.jpg" alt="">
+                        <p><span>20,00</span>$ US</p>
+                    </div>
+                    <p class="title"> ¡Ejercitador artesanal para tu amigo felino!</p>
+                    <a href="" data-id="4" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-5.jpg" alt="">
+                        <p><span>7,00</span>$ PROM</p>
+                    </div>
+                    <p class="title"> ¡Spray con aroma refrescante olor a frutas!</p>
+                    <a href="" data-id="5" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-6.jpg" alt="">
+                        <p><span>15</span>$ US</p>
+                    </div>
+                    <p class="title"> ¡Anti pulgas para gatos o perros con olor a menta!</p>
+                    <a href="" data-id="6" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-7.jpg" alt="">
+                        <p><span>23,00</span>$ US</p>
+                    </div>
+                    <p class="title"> ¡Crema dental anti-bacterias para tus peluditos!</p>
+                    <a href="" data-id="7" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                    <div>
+                        <img src="./assets/images/product-8.jpg" alt="">
+                        <p><span>10,00</span>$ PROM</p>
+                    </div>
+                    <p class="title"> ¡Croquetas GOLD ricas en vitaminas para perros!</p>
+                    <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-9.jpg" alt="">
+                    <p><span>10,00</span>$ US</p>
+                  </div>
+                  <p class="title"> ¡Crema nutridora para el pelaje de tus mascotas!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-10.jpg" alt="">
+                    <p><span>100,00</span>$ PROM</p>
+                  </div>
+                  <p class="title"> ¡Proveedor de agua automático para mascotas!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-11.jpg" alt="">
+                    <p><span>95,00</span>$ US</p>
+                  </div>
+                  <p class="title"> ¡Ayudante caminador para gatos o perros!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-12.jpg" alt="">
+                    <p><span>15,00</span>$ PROM</p>
+                  </div>
+                  <p class="title"> ¡Paquete de juguetes y decorativos de navidad!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-13.jpg" alt="">
+                    <p><span>5,00</span>$ US</p>
+                  </div>
+                  <p class="title"> ¡Paquete de gorro y bufanda navideña para perro!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+
+                <div class="carts">
+                  <div>
+                    <img src="./assets/images/product-14.jpg" alt="">
+                    <p><span>50,00</span>$ PROM</p>
+                  </div>
+                  <p class="title"> ¡Gimnasio artesanal para gatos!</p>
+                  <a href="" data-id="8" class="btn-add-cart">¡añadir al carrito!</a>
+                </div>
+  
+            
+
+        </div>
+    </section>
+
+
+    <!------Sección dedicada para los servicios de la página ------>
+
+    <section class="section service" aria-label="service">
+        <div class="container">
+
+          <img src="./assets/images/service-image.png" width="122" height="136" loading="lazy" alt="" class="img">
+
+          <h2 class="h2 section-title">
+            <span class="span">¡Elígenos</span> y déjanos cuidar de tu mascota!
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+                <div class="service-card">
+  
+                  <figure class="card-icon">
+                    <img src="./assets/images/service-icon-1.png" width="70" height="70" loading="lazy"
+                      alt="service icon">
+                  </figure>
+  
+                  <h3 class="h3 card-title">¡Tu pedido a la puerta de tu casa!</h3>
+  
+                  <p class="card-text">
+                    Domicilio gratis en Armenia y envíos nacionales/internacionales.
+                  </p>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+  
+                  <figure class="card-icon">
+                    <img src="./assets/images/service-icon-2.png" width="70" height="70" loading="lazy"
+                      alt="service icon">
+                  </figure>
+  
+                  <h3 class="h3 card-title">¡Hacemos devoluciones!</h3>
+  
+                  <p class="card-text">
+                    Si tu pedido llegó en mal estado o no era lo que esperabas, ¡Te devolvemos tu dinero!
+                  </p>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="service-card">
+  
+                  <figure class="card-icon">
+                    <img src="./assets/images/service-icon-3.png" width="70" height="70" loading="lazy"
+                      alt="service icon">
+                  </figure>
+  
+                  <h3 class="h3 card-title">¡Ofrecemos seguridad en tus compras y datos personales!</h3>
+  
+                  <p class="card-text">
+                    Tenemos un Software de verificación de seguridad para que tus datos estén protegidos, además de que tus compras sean totalmente seguras.
+                  </p>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="service-card">
+  
+                  <figure class="card-icon">
+                    <img src="./assets/images/service-icon-4.png" width="70" height="70" loading="lazy"
+                      alt="service icon">
+                  </figure>
+  
+                  <h3 class="h3 card-title">¡Tenemos Bot de sorporte o atención!</h3>
+  
+                  <p class="card-text">
+                    Contamos con un Bot que responderá tus dudas, preguntas o reclamos que tengas durante el horario de atención establecida.
+                  </p>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section>
+
+
+
+        <!------ Segunda parte de la decoración de la página ------>
+
+        <section class="cta has-bg-image" aria-label="cta" style="background-image: url('./assets/images/cta-bg.jpg')">
+            <div class="container">
+    
+              <figure class="cta-banner">
+                <img src="./assets/images/cta-banner.png" width="900" height="660" loading="lazy" alt="cat" class="w-100">
+              </figure>
+
+              <div class="cta-content">
+
+                <img src="./assets/images/cta-icon.png" width="120" height="35" loading="lazy" alt="próximamente en J & J"
+                  class="img">
+    
+                <h2 class="h2 section-title">¡Traeremos nuevos productos para mejorar nuestra calidad de tienda y servicios para tu mejor amigo!</h2>
+    
+                <p class="section-text">
+                  Haremos esto con el fin de ampliar nuestra tienda y así dar a conocer mejor nuestra marca. Sí deseas dejarnos una sugerencia de productos que desearías ver en nuestra tienda...
+                </p>
+    
+                <a href="#" class="btn">¡Pulsa click aquí!</a>
+    
+              </div>
+    
+            </div>
+          </section>
+
+
+          <!------ Patrocinio y marca de la página ------>
+
+
+          <section class="section brand" aria-label="brand">
+            <div class="container">
+    
+              <h2 class="h2 section-title">
+                <span class="span">¡Nuestras</span> marcas propias!
+              </h2>
+    
+              <ul class="has-scrollbar">
+    
+                <li class="scrollbar-item">
+                  <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                    <img src="./assets/images/brand-1.jpg" width="150" height="150" loading="lazy" alt="brand logo"
+                  class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="./assets/images/brand-2.jpg" width="150" height="150" loading="lazy" alt="brand logo"
+                  class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="./assets/images/brand-3.jpg" width="150" height="150" loading="lazy" alt="brand logo"
+                  class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="./assets/images/brand-4.jpg" width="150" height="150" loading="lazy" alt="brand logo"
+                  class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="./assets/images/brand-5.jpg" width="150" height="150" loading="lazy" alt="brand logo"
+                  class="img-cover">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <!------ Parte final de la página ------>
+
+      <footer class="footer" style="background-image: url('./assets/images/footer-bg.jpg')">
+
+        <div class="footer-top section">
+          <div class="container">
+    
+            <div class="footer-brand">
+    
+              <a href="#" class="logo">J&J INFO</a>
+    
+              <p class="footer-text">
+                Sí deseas contactarnos, puedes hacerlo en los siguientes correos: <a href="mailto:support@gmail.com"
+                  class="link">jsanchez2223@cue.edu.co | acastano2233@cue.edu.co</a>
+              </p>
+    
+              <ul class="contact-list">
+    
+                <li class="contact-item">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+    
+                  <address class="address">
+                    Cl. 4 Nte. # 13-05, Armenia, Quindío
+                  </address>
+                </li>
+    
+                <li class="contact-item">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+    
+                  <a href="tel:+57 320697 6551" class="contact-link">(+57) 320 697 6551</a>
+                </li>
+
+                <li class="schedule-item">
+                    <ion-icon name="horary-outline" aria-hidden="true"></ion-icon>
+
+                    <a href=" HRS: 8:00 a.m - 12 p.m | 2 p.m - 6 p.m" class="horary-item"> HRS: 8:00 a.m - 12 p.m | 2 p.m - 6 p.m</a>
+                </li>
+    
+              </ul>
+    
+              <ul class="social-list">
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+            <ul class="footer-list">
+    
+                <li>
+                    <p class="footer-list-title">¡Sobre nosotros!</p>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Profesionales 100% certificados</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Tienda con más de 10 años de experiencia</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Ayudamos a los animalitos desfavorecidos!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Preguntas Frecuentes</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Veterinaria a tu domicilio!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Tenemos vínculos con corporaciones reconocidas</a>
+                  </li>
+        
+                </ul>
+        
+                <ul class="footer-list">
+        
+                  <li>
+                    <p class="footer-list-title">Información</p>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Tienda Online y física</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Políticas de privacidad</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Asesorías o consultas</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Número 1° en el cuidado de tus mascotas!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Productos 100% artesanales</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Manejamos las mejores marcas!</a>
+                  </li>
+        
+                </ul>
+        
+                <ul class="footer-list">
+        
+                  <li>
+                    <p class="footer-list-title">Servicios</p>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Atención 5 estrellas!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Domicilios a tú casa!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Servicios de veterinaria!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Recibimos todo método de pago!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">¡Servicio de baño y spa!</a>
+                  </li>
+        
+                  <li>
+                    <a href="#" class="footer-link">Productos hechos con amor para tu mascota</a>
+                  </li>
+        
+                </ul>
+        
+              </div>
+            </div>
+    
+        <div class="footer-bottom">
+          <div class="container">
+    
+            <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">
+    
+          </div>
+        </div>
+    
+      </footer>
+
+      <!------ Link directo al JavaScript ------>
+
+      <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+            document.getElementById("products-id").style.display = "none";
+        }
+      </script>
+
+      <script src="./assets/js/script.js" defer></script>
+
+
+      <!------ Parte del Ionicon ------>
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    </article>
+</main>
+
+
+</body>
+</html>
+
